@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ava.xvfx — materialele mele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /><link rel="stylesheet" href="fruit-background.css" />
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html">ava<em>.xvfx</em></a><nav><a href="despre-mine.html">Despre mine</a><a href="index.html#materii">Materii</a><a class="active" href="materiale.html">Materiale</a><a href="recomandari.html">Recomandări melodii pentru studiu</a></nav><button class="add-button" id="open-modal">+ Adaugă material</button></header>
+  <main><section class="materials separate-materials"><div class="section-heading"><div><p class="eyebrow">BIBLIOTECA TA</p><h2>Materiale recente</h2></div><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Caută un material" /></label></div><div class="empty-state" id="empty-state"><div class="empty-icon">▤</div><h3>Aici vor apărea materialele tale</h3><p>Adaugă primul curs, document sau link și îl vei găsi imediat aici.</p><button class="primary-button" id="empty-add">Adaugă primul material</button></div><div class="material-list" id="material-list" hidden></div></section></main>
+  <footer>ava.xvfx</footer>
+  <dialog id="material-modal"><form method="dialog" id="material-form"><div class="modal-heading"><div><p class="eyebrow">MATERIAL NOU</p><h2>Adaugă în bibliotecă</h2></div><button class="close" value="cancel" aria-label="Închide">×</button></div><label>Numele materialului<input required name="title" placeholder="ex. Formule de bază" /></label><label>Materia<select required name="subject" id="subject-select"></select></label><label>Tipul materialului<select name="type"><option>Curs / notițe</option><option>Link util</option><option>Document</option><option>Exerciții</option></select></label><label>Link sau descriere (opțional)<input name="details" placeholder="https://... sau o notiță scurtă" /></label><div class="form-actions"><button value="cancel" class="secondary-button">Renunță</button><button class="primary-button" value="default">Salvează materialul</button></div></form></dialog>
+  <script src="materials.js"></script>
+</body></html>

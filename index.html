@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ava.xvfx — materialele mele</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fruit-background.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">ava<em>.xvfx</em></a>
+      <nav>
+        <a href="despre-mine.html">Despre mine</a>
+        <a class="active" href="#materii">Materii</a>
+        <a href="materiale.html">Materiale</a>
+        <a href="recomandari.html">Recomandări melodii pentru studiu</a>
+      </nav>
+      <button class="add-button" id="open-modal">+ Adaugă material</button>
+    </header>
+
+    <main>
+      <section class="hero" id="despre">
+        <div>
+          <p class="eyebrow">SPAȚIUL TĂU DE ÎNVĂȚARE</p>
+          <h1>Tot ce înveți,<br /><i>într-un singur loc.</i></h1>
+          <p class="intro">Organizează cursuri, fișe, linkuri și resurse pentru fiecare materie. Adaugă oricând materiale noi, fără să pierzi firul.</p>
+          <a class="hero-link" id="show-subjects" href="#materii" aria-expanded="false"><span id="subjects-label">Vezi materiile</span> <span id="subjects-arrow">↓</span></a>
+        </div>
+        <aside class="quote-card">
+          <span class="quote-mark">“</span>
+          <p>Învățarea nu este o cursă. Este o colecție de idei la care te întorci.</p>
+          <span class="sun">✦</span>
+        </aside>
+      </section>
+
+      <section class="subjects" id="materii" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ORGANIZARE SIMPLĂ</p>
+            <h2>Materiile mele</h2>
+          </div>
+          <button class="text-button" id="add-subject">+ Materie nouă</button>
+        </div>
+        <div class="subject-grid" id="subject-grid">
+          <button class="subject-card violet" data-subject="Matematică"><span class="subject-icon">∑</span><strong>Matematică</strong><small>0 materiale</small><b>→</b></button>
+          <button class="subject-card lavender" data-subject="Limba română"><span class="subject-icon">Aa</span><strong>Limba română</strong><small>0 materiale</small><b>→</b></button>
+          <button class="subject-card lilac" data-subject="Geografie"><span class="subject-icon">⌘</span><strong>Geografie</strong><small>0 materiale</small><b>→</b></button>
+          <button class="subject-card mauve" data-subject="Fizică"><span class="subject-icon">✿</span><strong>Fizică</strong><small>0 materiale</small><b>→</b></button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>ava.xvfx</footer>
+
+    <dialog id="material-modal">
+      <form method="dialog" id="material-form">
+        <div class="modal-heading"><div><p class="eyebrow">MATERIAL NOU</p><h2>Adaugă în bibliotecă</h2></div><button class="close" value="cancel" aria-label="Închide">×</button></div>
+        <label>Numele materialului<input required name="title" placeholder="ex. Formule de bază" /></label>
+        <label>Materia<select required name="subject" id="subject-select"></select></label>
+        <label>Tipul materialului<select name="type"><option>Curs / notițe</option><option>Link util</option><option>Document</option><option>Exerciții</option></select></label>
+        <label>Link sau descriere (opțional)<input name="details" placeholder="https://... sau o notiță scurtă" /></label>
+        <div class="form-actions"><button value="cancel" class="secondary-button">Renunță</button><button class="primary-button" value="default">Salvează materialul</button></div>
+      </form>
+    </dialog>
+    <dialog id="subject-modal">
+      <form method="dialog" id="subject-form">
+        <div class="modal-heading"><div><p class="eyebrow">MATERIE NOUĂ</p><h2>Creează o categorie</h2></div><button class="close" value="cancel" aria-label="Închide">×</button></div>
+        <label>Numele materiei<input required name="name" placeholder="ex. Geografie" /></label>
+        <div class="form-actions"><button value="cancel" class="secondary-button">Renunță</button><button class="primary-button" value="default">Adaugă materia</button></div>
+      </form>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
